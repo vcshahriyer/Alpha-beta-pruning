@@ -54,8 +54,21 @@ int minimax(int depth, int nodeIndex, bool maxnode,
 // Driver Code
 int main()
 {
-    int values[8] = { 3, 5, 6, 9, 1, 2, 0, -1 };
-    cout << "The optimal value is : "
-         << minimax(0, 0, true, values, MIN, MAX);;
+    int values[100],n=0,j;
+    while(n<3)
+    {
+            cout<<"How many value you want.\n"<<endl;
+            cin>>j;
+            cout<<"Enter value for alpha beta pruning.\n"<<endl;
+
+            for(int i =0; i<j; i++){
+                cin>>values[i];
+            }
+
+
+            cout << "The optimal value is : "
+                 << minimax(0, 0, true, values, MIN, MAX)<<"\n"<<endl;
+
+            }
     return 0;
 }
